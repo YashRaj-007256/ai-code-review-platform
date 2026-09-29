@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #F8FAFC;
+  color: #0F172A;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html.dark {
+  background-color: #020617;
+  color: #F8FAFC;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+/* Markdown styling in review output */
+.markdown-body h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1E293B;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+.dark .markdown-body h2 {
+  color: #F8FAFC;
+  border-bottom-color: #334155;
+}
+.markdown-body h2:first-child {
+  margin-top: 0;
+}
+.markdown-body p {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  color: #475569;
+}
+.dark .markdown-body p {
+  color: #94A3B8;
+}
+.markdown-body ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin-bottom: 0.9rem;
+}
+.markdown-body li {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+  color: #334155;
+}
+.dark .markdown-body li {
+  color: #CBD5E1;
+}
+.markdown-body strong {
+  color: #2563EB;
+  font-weight: 600;
+}
+.dark .markdown-body strong {
+  color: #60A5FA;
+}
+.markdown-body code {
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  color: #2563EB;
+}
+.dark .markdown-body code {
+  background: #1E293B;
+  border-color: #334155;
+  color: #93C5FD;
+}
+.markdown-body pre {
+  background: #0F172A;
+  color: #F8FAFC;
+  border: 1px solid #1E293B;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.markdown-body pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #E2E8F0;
+}
+
